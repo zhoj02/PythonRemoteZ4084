@@ -2,7 +2,7 @@
 from mysql.connector import connect, Error
 
 try:
-    with connect(host="localhost", user='test', password='test') as conn:
+    with connect(host="localhost", user='root', password='YourNewPassword') as conn:
         print(conn)
 
 except Error as e:
