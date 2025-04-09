@@ -1,5 +1,5 @@
 #pip install mysql-connector-python
-
+#https://dev.mysql.com/doc/connector-python/en/connector-python-example-connecting.html
 
 from mysql.connector import connect, Error
 
