@@ -3,7 +3,7 @@
 
 from mysql.connector import connect, Error
 
-with open("heslo.txt","r") as file:
+with open("heslo.txt", "r") as file:
     password = file.read()
 
 try:
@@ -12,3 +12,4 @@ try:
 
 except Error as e:
     print(e)
+
