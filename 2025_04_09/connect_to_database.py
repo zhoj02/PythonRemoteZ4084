@@ -4,4 +4,4 @@ with open("heslo.txt", "r") as file:
     password = file.read()
 
 with connect(user="root", password=password) as conn:
-    pass
+    cursor = conn.cursor()
