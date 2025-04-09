@@ -1,4 +1,7 @@
 from mysql.connector import connect
 
-with connect(user="root", password="YourNewPassword") as conn:
+with open("heslo.txt", "r") as file:
+    password = file.read()
+
+with connect(user="root", password=password) as conn:
     pass
