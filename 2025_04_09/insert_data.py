@@ -9,6 +9,6 @@ with connect(user="root", password=password, database="online_movie_rating") as 
         INSERT INTO movies (id, title)
         VALUES
             (1, "Forrest Gump"),
-            (2, "Pelíšky");
+            (2, "Pelíšky")
         """)
     conn.commit()
