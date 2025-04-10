@@ -10,6 +10,6 @@ tuple_s_hodnotami = ("Forrest Gump",)
 with connect(user="root", password=password, database="online_movie_rating") as conn:
     cursor = conn.cursor()
     cursor.execute(f"""
-        SELECT * FROM movies WHERE title = '%s'
-        """, tuple_s_hodnotami)
+        SELECT * FROM movies WHERE title = %s
+        """, tuple_s_hodnotami, multi=True)
     print(cursor.fetchall())
