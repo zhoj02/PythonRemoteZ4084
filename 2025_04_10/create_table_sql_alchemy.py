@@ -21,4 +21,5 @@ class Actor(Base):
     name = Column(String(50))
     birth_date = Column(Date)
 
+
 Base.metadata.create_all(db)
