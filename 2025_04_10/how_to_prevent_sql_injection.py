@@ -11,5 +11,5 @@ with connect(user="root", password=password, database="online_movie_rating") as 
     cursor = conn.cursor()
     cursor.execute(f"""
         SELECT * FROM movies WHERE title = %s
-        """, tuple_s_hodnotami, multi=True)
+        """, tuple_s_hodnotami, map_results=True)
     print(cursor.fetchall())
