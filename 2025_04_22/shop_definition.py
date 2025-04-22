@@ -8,7 +8,7 @@ class CiselnikZbozi(Base):
     __tablename__ = "CiselnikZbozi"
     # Primary Key
     id = Column(Integer, primary_key=True)
-    nazev_zbozi = Column(String)
+    nazev_zbozi = Column(String(100))
     carovy_kod = Column(Integer)
 
 

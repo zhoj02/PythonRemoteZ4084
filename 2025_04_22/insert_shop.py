@@ -10,6 +10,8 @@ sessionmaker = sessionmaker(bind=db)
 session = sessionmaker()
 # Create mock data
 session.add(CiselnikZbozi(id=1, nazev_zbozi="Test Product", carovy_kod=1234567890123))
+# Commit the transaction
+session.commit()
 # insert into CiselnikZbozi
 # (id, nazev_zbozi, carovy_kod) values (1, 'Test Product', 1234567890123)
 
