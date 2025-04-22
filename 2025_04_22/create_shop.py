@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 
 
 class CiselnikZbozi:
@@ -12,11 +12,11 @@ class Zasoby:
     id = Column(Integer, primary_key=True)
     #Foreign Key
     cislo_zbozi = Column(Integer, ForeignKey('CiselnikZbozi.id'))
-    pocet = 10
+    pocet = Column(Integer)
 
 
 class Prodeje:
-    id = 1
-    cislo_zbozi = CiziKlic(CiselnikZbozi(id))
-    cas_prodeje = "14:30 2025-04-21"
-    pocet = 2
+    id = Column(Integer, primary_key=True)
+    cislo_zbozi = Column(Integer, ForeignKey('CiselnikZbozi.id'))
+    cas_prodeje = Column(DateTime)
+    pocet = Column(Integer)
