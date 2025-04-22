@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
-
+from sqlalchemy.ext.declarative import declarative_base
 
 class CiselnikZbozi:
     # Primary Key
