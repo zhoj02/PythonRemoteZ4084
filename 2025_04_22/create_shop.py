@@ -11,7 +11,7 @@ class CiselnikZbozi:
 class Zasoby:
     id = Column(Integer, primary_key=True)
     #Foreign Key
-    cislo_zbozi = Column(Integer, ForeignKey(CiselnikZbozi.id))
+    cislo_zbozi = Column(Integer, ForeignKey('CiselnikZbozi.id'))
     pocet = 10
 
 
