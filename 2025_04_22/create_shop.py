@@ -1,12 +1,15 @@
+from sqlalchemy import Column
+
 class CiselnikZbozi:
-    id = Primarni klic(1)
+    # Primary Key
+    id = Column(Integer, primary_key=True)
     nazev_zbozi = "Ranné brambory"
     carovy_kod = 987548
 
 
 class Zasoby:
     id = 1
-    #Foreign Keys
+    #Foreign Key
     cislo_zbozi = CiziKlic(CiselnikZbozi(id))
     pocet = 10
 
