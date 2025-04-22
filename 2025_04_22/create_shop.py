@@ -5,6 +5,7 @@ Base = declarative_base()
 
 
 class CiselnikZbozi(Base):
+    __tablename__ = "CiselnikZbozi"
     # Primary Key
     id = Column(Integer, primary_key=True)
     nazev_zbozi = Column(String)
@@ -12,6 +13,7 @@ class CiselnikZbozi(Base):
 
 
 class Zasoby(Base):
+    __tablename__ = "Zasoby"
     id = Column(Integer, primary_key=True)
     #Foreign Key
     cislo_zbozi = Column(Integer, ForeignKey('CiselnikZbozi.id'))
@@ -19,6 +21,7 @@ class Zasoby(Base):
 
 
 class Prodeje(Base):
+    __tablename__ = "Prodeje"
     id = Column(Integer, primary_key=True)
     cislo_zbozi = Column(Integer, ForeignKey('CiselnikZbozi.id'))
     cas_prodeje = Column(DateTime)
