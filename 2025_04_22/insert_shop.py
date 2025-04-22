@@ -9,7 +9,7 @@ db = create_engine('mysql+mysqlconnector://root:YourNewPassword@localhost:3306/s
 sessionmaker = sessionmaker(bind=db)
 session = sessionmaker()
 # Create mock data
-session.add(CiselnikZbozi(id=1, nazev_zbozi="Test Product", carovy_kod=15758))
+session.add(CiselnikZbozi(id=2, nazev_zbozi="Test Product 2", carovy_kod=157578))
 # Commit the transaction
 session.commit()
 
