@@ -1,0 +1,1 @@
+# Ukol 6 - Smazat obsah všech tabulek
