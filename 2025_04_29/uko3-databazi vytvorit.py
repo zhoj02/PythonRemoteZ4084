@@ -1,0 +1,1 @@
+# Ukol 3 - Tabulky z definice vytvorit v databazi
