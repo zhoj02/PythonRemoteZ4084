@@ -19,7 +19,7 @@ class Employee(Base):
     __tablename__ = 'employee'
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
-    salary_id = Column(Integer, ForeignKey('salary.id'))
+    # salary_id = Column(Integer, ForeignKey('salary.id'))
 
     salary = relationship("Salary", back_populates="employees")
 
@@ -28,5 +28,5 @@ class Salary(Base):
     __tablename__ = 'salary'
     id = Column(Integer, primary_key=True)
     amount = Column(Integer)
-
+    employee_id = Column(Integer, ForeignKey('employee.id'))
     employees = relationship("Employee", back_populates="salary")
