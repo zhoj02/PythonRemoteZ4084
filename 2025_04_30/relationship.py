@@ -40,3 +40,7 @@ session = Session()
 employee = Employee(name='John Doe')
 # create a new salary
 salary = Salary(amount=50000, employee_id=1, date_from='2025-04-30')
+
+# add the employee and salary to the session
+session.add(employee)
+session.add(salary)
