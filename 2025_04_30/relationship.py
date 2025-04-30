@@ -19,7 +19,7 @@ class Employee(Base):
     __tablename__ = 'employee'
     id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50))
-
+    # salary_id = Column(Integer, ForeignKey('salary.id'))
     salary = relationship("Salary", back_populates="employees")
 
 
@@ -48,3 +48,8 @@ session.commit()
 
 # query the employee
 print(session.query(Employee).filter_by(name='John Doe').first().salary[0].amount)
+
+# Vztahy
+# 1:1 - One to One
+# 1:N - One to Many
+# N:M - Many to Many
