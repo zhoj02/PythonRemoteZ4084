@@ -17,7 +17,7 @@ from sqlalchemy.orm import relationship
 
 class Employee(Base):
     __tablename__ = 'employee'
-    id = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True, autoincrement=True)
     name = Column(String(50))
 
     salary = relationship("Salary", back_populates="employees")
@@ -47,4 +47,4 @@ session.add(salary)
 session.commit()
 
 # query the employee
-print(session.query(Employee).filter_by(name='John Doe').first().salary)
+print(session.query(Employee).filter_by(name='John Doe').first().salary[0].amount)
